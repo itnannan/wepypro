@@ -1,0 +1,56 @@
+<style lang="less">
+.page{width:100%;}
+</style>
+<template>
+  <view class="container">
+    <view class="t-home">home</view>
+    <view class="page">
+      <view class="weui-cells__title">状态管理和复杂页面</view>
+      <view class="weui-cells weui-cells_after-title"> 
+          <view class="weui-cell__bd t-text">{{text}}</view>
+          <view class="weui-cell__bd t-text">{{a}}</view>
+
+      </view>
+      <view class="weui-cells weui-cells_after-title"> 
+        <repeat for="{{list}}" key="index" item="item" index="index">
+          <view class="weui-cell__bd t-text" @tap="plus">{{item.id}}+'='+{{item.name}}+'='+{{index}}</view>   
+        </repeat>   
+      </view>
+      <navigator class="weui-cell weui-cell_access" url="/pages/demo">
+        <view class="weui-cell__bd">Demo</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access" />
+      </navigator>
+  </view>
+  </view>
+</template>
+
+<script>
+   import wepy from 'wepy'
+   import { connect } from 'wepy-redux'
+   export default class Home extends wepy.page {
+    config = {
+      navigationBarTitleText: 'home'
+    }
+    components = {
+      
+    }
+
+    data = {
+      text:'231',
+      a:22
+    }
+
+    computed = {
+      aplus(){
+        return this.a+1;
+      }
+    }
+
+    methods = {
+    }
+
+    events = {
+    }
+  } 
+  
+</script>

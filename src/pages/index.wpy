@@ -1,0 +1,25 @@
+<style lang="less">
+  .page1{width:100%;}
+</style>
+<template>
+  <view class="container">
+    <view class="page1">
+    <view class="weui-cells__title">状态管理和复杂页面</view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator class="weui-cell weui-cell_access" url="/pages/demo">
+        <view class="weui-cell__bd">Demo</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access" />
+      </navigator>
+    </view>
+  </view>
+  </view>
+</template>
+
+<script>
+   import wepy from 'wepy'
+   export default class page1 extends wepy.page{
+     data ={
+       text :'',
+     }
+   }
+</script>

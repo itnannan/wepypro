@@ -1,0 +1,44 @@
+<style lang="less">
+.heg{
+  width:100%;
+  background:red;
+}
+</style>
+
+<template>
+  <view class="heg">
+    {{he}}
+  </view>
+</template>
+
+<script>
+   import wepy from 'wepy'
+  export default class Heg extends wepy.component{
+    data={
+      he: 2
+    }
+    computed = {
+      add(){
+        return this.he+1;
+      }
+    }
+    props = {
+      ex:String,
+      syncEx :{
+        type:'String',
+        default:null
+      },
+      twoWayEx:{
+        type:Number,
+        default:'nothing',
+        twoWay:true
+      }
+
+    }
+    onLoad (){
+      console.log(this.ex);
+      console.log(this.syncEx); 
+      console.log(this.twoWayEx); 
+    }
+  }
+</script>

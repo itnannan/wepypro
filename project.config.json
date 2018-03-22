@@ -1,0 +1,15 @@
+{
+	"description": "demo",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"appid": "wx511cc920db565f1f",
+	"projectname": "demo231",
+	"miniprogramRoot": "./dist",
+	"condition": {}
+}

@@ -1,0 +1,38 @@
+<style lang="less">
+
+</style>
+<template>
+  <view class="container">
+    <view class="t-home">classify</view>
+  </view>
+</template>
+
+<script>
+   import wepy from 'wepy'
+   import { connect } from 'wepy-redux'
+   export default class Classify extends wepy.page {
+    config = {
+      navigationBarTitleText: 'classify'
+    }
+    components = {
+      
+    }
+
+    data = {
+    }
+
+    computed = {
+    }
+
+    methods = {
+    }
+
+    events = {
+    }
+
+    onLoad() {
+     
+    }
+  } 
+  
+</script>

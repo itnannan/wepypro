@@ -1,0 +1,38 @@
+<style lang="less">
+
+</style>
+<template>
+  <view class="container">
+    <view class="t-home">shop_cart</view>
+  </view>
+</template>
+
+<script>
+   import wepy from 'wepy'
+   import { connect } from 'wepy-redux'
+   export default class Shop_cart extends wepy.page {
+    config = {
+      navigationBarTitleText: 'shop_cart'
+    }
+    components = {
+      
+    }
+
+    data = {
+    }
+
+    computed = {
+    }
+
+    methods = {
+    }
+
+    events = {
+    }
+
+    onLoad() {
+     
+    }
+  } 
+  
+</script>

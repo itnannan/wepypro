@@ -1,0 +1,56 @@
+<style lang="less">
+  .page1{width:100%;}
+  .t-text{height:30px;text-align:left;line-height:30px;box-sizing:border-box;padding-left:10px;}
+</style>
+<template>
+  <view class="container">
+    <view class="page1">
+    <view class="weui-cells__title">状态管理和复杂页面</view>
+    <view class="weui-cells weui-cells_after-title"> 
+        <view class="weui-cell__bd t-text">{{text}}</view>
+        <view class="weui-cell__bd t-text">{{a}}</view>
+
+    </view>
+    <view class="weui-cells weui-cells_after-title"> 
+      <repeat for="{{list}}" key="index" item="item" index="index">
+         <view class="weui-cell__bd t-text" @tap="plus">{{item.id}}+'='+{{item.name}}+'='+{{index}}</view>   
+      </repeat>   
+    </view>
+  </view>
+  </view>
+  <list></list>
+  <tpn></tpn>
+  <heg title="23323" :ex="666" :syncEx.sync="666" :twoWayEx="666"></heg>
+</template>
+
+<script>
+   import wepy from 'wepy'
+   import Heg from  '../components/heg' 
+   import List from '../components/list' // aliasFields example
+   import Tpn from '../components/tpn' // aliasFields example
+   export default class Demo extends wepy.page{
+     data ={
+       text :'23322323',
+       a: 1,
+      list:[
+        {id:1,name:'haha'},
+        {id:2,name:'233'}
+      ]
+     }
+     components = {
+      list: List,
+      tpn: Tpn,
+      heg : Heg
+     }
+     computed = {
+       aplus(){
+         return this.a+3
+       }
+     }
+     methods = {
+       plus(){
+         console.log(this.list);
+       }
+     }
+   }
+</script>
