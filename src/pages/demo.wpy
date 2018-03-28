@@ -1,6 +1,65 @@
 <style lang="less">
   .page1{width:100%;}
   .t-text{height:30px;text-align:left;line-height:30px;box-sizing:border-box;padding-left:10px;}
+  .swiper {
+  height: 348rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.pos {
+  position: absolute;
+  top: 0rpx;
+  left: 0;
+  right: 0;
+  .search_content {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid #efefee;
+    .icon-search,
+    .search_input {
+      color: #efefee;
+    }
+  }
+  .message {
+    display: block;
+    text-align: center;
+    margin-left: 20rpx;
+  }
+  .doc {
+    font-size: 16rpx;
+    display: block;
+  }
+}
+
+
+.nav_list {
+  color: #404040;
+  display: flex;
+  font-size: 26rpx;
+  justify-content: space-between;
+  padding: 17rpx 50rpx;
+  navigator {
+    text-align: center
+  }
+  .nav_icon {
+    height: 80rpx;
+    margin: 0 auto;
+    width: 80rpx;
+    margin-bottom: 14rpx;
+  }
+  .nav_text {
+    font-size: 26rpx
+  }
+}
+
+.recommend-title {
+  padding: 40rpx 0;
+  text-align: center;
+  color: #333;
+}
 </style>
 <template>
   <view class="container">
@@ -17,28 +76,48 @@
       </repeat>   
     </view>
   </view>
+      <view class="nav_list">
+      <navigator open-type="navigate" >
+        <image src="../images/icon_nav_01_new.png" class="nav_icon"></image>
+        <view class="nav_text">签到有礼</view>
+      </navigator>
+      <navigator open-type="navigate">
+        <image src="../images/icon_nav_02_new.png" class="nav_icon"></image>
+        <view class="nav_text">换货专区</view>
+      </navigator>
+      <navigator open-type="navigate" >
+        <image src="../images/icon_nav_03_new.png" class="nav_icon"></image>
+        <view class="nav_text">特价专区</view>
+      </navigator>
+      <navigator open-type="navigate" >
+        <image src="../images/icon_nav_04_new.png" class="nav_icon"></image>
+        <view class="nav_text">我要补货</view>
+      </navigator>
+    </view>
   </view>
-  <list></list>
+ <!--  <list></list> -->
   <tpn></tpn>
-  <heg title="23323" :ex="666" :syncEx.sync="666" :twoWayEx="666"></heg>
+  <heg title="23323" :ex="pEx" :syncEx.sync="pEx" :twoWayEx="pEx"></heg>
+  
 </template>
 
 <script>
    import wepy from 'wepy'
    import Heg from  '../components/heg' 
-   import List from '../components/list' // aliasFields example
+   //import List from '../components/list' // aliasFields example
    import Tpn from '../components/tpn' // aliasFields example
    export default class Demo extends wepy.page{
      data ={
        text :'23322323',
        a: 1,
+       pEx:"p-title",
       list:[
         {id:1,name:'haha'},
         {id:2,name:'233'}
       ]
      }
      components = {
-      list: List,
+      //list: List,
       tpn: Tpn,
       heg : Heg
      }

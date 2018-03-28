@@ -17,14 +17,14 @@
       </view>
     </block>
   </view>
-  <heg title="23323" :ex="666" :syncEx.sync="666" :twoWayEx="666"></heg>
+  <heg title="23323" :ex="pEx" :syncEx.sync="pEx" :twoWayEx="pEx"></heg>
 </template>
 <script>
   import wepy from 'wepy'
   import Heg from  './heg' 
   export default class Tpn extends wepy.component {
     data = {
-      ex:'p-title',
+      pEx:'p-title',
       list: [
         {
           id: '0',

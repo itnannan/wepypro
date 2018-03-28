@@ -25,11 +25,11 @@
     props = {
       ex:String,
       syncEx :{
-        type:'String',
-        default:null
+        type:String,
+        default:'null'
       },
-      twoWayEx:{
-        type:Number,
+      twoWayEx :{
+        //type:Number,
         default:'nothing',
         twoWay:true
       }
@@ -39,6 +39,16 @@
       console.log(this.ex);
       console.log(this.syncEx); 
       console.log(this.twoWayEx); 
+      this.ex = 'heheh';
+      console.log(this.$parent.pEx);
+      console.log(this.ex)
+      this.twoWayEx = 2;
+      this.$apply();
+      console.log(this.$parent.pEx);
+      this.$parent.pEx = 333;
+      this.$parent.$apply();
+      //console.log(this.ex);
+      console.log(this.syncEx);
     }
   }
 </script>

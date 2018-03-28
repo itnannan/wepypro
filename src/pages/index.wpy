@@ -10,6 +10,10 @@
         <view class="weui-cell__bd">Demo</view>
         <view class="weui-cell__ft weui-cell__ft_in-access" />
       </navigator>
+      <navigator class="weui-cell weui-cell_access" url="/pages/demo2">
+        <view class="weui-cell__bd">Demo</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access" />
+      </navigator>
     </view>
   </view>
   </view>
